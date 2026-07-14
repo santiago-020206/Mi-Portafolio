@@ -144,4 +144,14 @@ document.addEventListener('DOMContentLoaded', () => {
             
         }, false);
     }
+    // LIMPIAR FORMULARIO AL VOLVER ATRÁS ---
+    window.addEventListener('pageshow', function(event) {
+        
+        // o si simplemente recargó la página.
+        const form = document.getElementById('contactForm');
+        if (form) {
+            form.reset(); // Borra todo el texto escrito
+            form.classList.remove('was-validated'); // Quita los bordes verdes/rojos de Bootstrap
+        }
+    });
 });
