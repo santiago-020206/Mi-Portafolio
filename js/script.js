@@ -125,8 +125,9 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-  // --- 8. VALIDACIÓN DEL FORMULARIO DE CONTACTO (CORREGIDO PARA FORMSPREE) ---
-    const contactForm = document.getElementById('contactForm');
+
+    // --- 8. VALIDACIÓN DEL FORMULARIO DE CONTACTO (CORREGIDO PARA FORMSPREE) ---
+    const contactForm = document.getElementById('contactForm'); 
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
@@ -141,12 +142,6 @@ document.addEventListener('DOMContentLoaded', () => {
             
             contactForm.classList.add('was-validated'); // Muestra los estilos de validación de Bootstrap
             
-        }, false);
-    }
-                
-                // Limpiar formulario
-                contactForm.reset();
-            }
         }, false);
     }
 });
