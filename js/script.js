@@ -1,3 +1,4 @@
+
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- 1. MODO OSCURO / CLARO ---
@@ -125,9 +126,8 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-
     // --- 8. VALIDACIÓN DEL FORMULARIO DE CONTACTO (CORREGIDO PARA FORMSPREE) ---
-    const contactForm = document.getElementById('contactForm'); 
+    const contactForm = document.getElementById('contactForm'); // Asegúrate de que el ID en tu HTML sea "contactForm"
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
