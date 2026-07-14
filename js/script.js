@@ -1,9 +1,3 @@
-/**
- * PORTAFOLIO SANTIAGO GARCÍA
- * Archivo principal de JavaScript
- * Requisitos: ES6+, sin jQuery, validaciones, animaciones, manejo de DOM.
- */
-
 document.addEventListener('DOMContentLoaded', () => {
     
     // --- 1. MODO OSCURO / CLARO ---
