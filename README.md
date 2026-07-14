@@ -1,2 +1,2 @@
 # Mi-Portafolio
-En este repositorio estar mi portafolio de trabajo.
+En este repositorio esta mi portafolio de trabajo.
