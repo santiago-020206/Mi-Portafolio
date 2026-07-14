@@ -125,24 +125,24 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // --- 8. VALIDACIÓN DEL FORMULARIO DE CONTACTO ---
+  // --- 8. VALIDACIÓN DEL FORMULARIO DE CONTACTO (CORREGIDO PARA FORMSPREE) ---
     const contactForm = document.getElementById('contactForm');
     
     if (contactForm) {
         contactForm.addEventListener('submit', function(event) {
-            event.preventDefault(); // Evita que la página recargue siempre
             
+            // Si el formulario NO es válido (faltan datos o hay errores)
             if (!contactForm.checkValidity()) {
+                event.preventDefault(); // Detenemos el envío
                 event.stopPropagation();
-                contactForm.classList.add('was-validated');
-            } else {
-                // Simulación de envío exitoso
-                contactForm.classList.remove('was-validated');
-                
-                // Mostrar Toast de éxito
-                const formToastEl = document.getElementById('formToast');
-                const formToast = new bootstrap.Toast(formToastEl);
-                formToast.show();
+            } 
+            // Si el formulario SÍ es válido, NO usamos preventDefault()
+            // Dejamos que el formulario siga su curso natural hacia Formspree.
+            
+            contactForm.classList.add('was-validated'); // Muestra los estilos de validación de Bootstrap
+            
+        }, false);
+    }
                 
                 // Limpiar formulario
                 contactForm.reset();
